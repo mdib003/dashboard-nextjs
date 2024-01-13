@@ -12,6 +12,11 @@
   --padding-1: 16px;
   --padding-2: 24px;
   --padding-3: 32px;
+  --margin-1: 8px;
+  --margin-2: 16px;
+  --margin-3: 24px;
+  --margin-4: 32px;
+  --margin-5: 48px;
   --lora: 'Lora', serif;
   --poppins: 'Poppins', sans-serif;
 }
@@ -122,10 +127,12 @@ p {
   display: flex;
 }
 
-.dashboard-main {
-  min-height: 200vh;
+.dashboard-main {  
   flex: 4;
+  padding: var(--padding-1);
 }
+
+/** SIDEBAR CSS **/
 
 .sidebar-main {
   flex: 1;
@@ -145,6 +152,7 @@ p {
 .admin-details {
   display: flex;
   align-items: center;
+  margin-bottom: var(--margin-3);
 }
 
 .admin-img {
@@ -153,4 +161,13 @@ p {
   border-radius: 50%;
   overflow: hidden;
   margin-right: 16px;
+}
+
+/** NAVBAR CSS */
+
+.dashboard-navbar {
+  width: 100%;
+  background-color: var(--color2);
+  padding: var(--padding-2);
+  border-radius: var(--border-radius-2);
 }

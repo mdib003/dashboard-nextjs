@@ -20,8 +20,7 @@ export default function RootLayout({
           <div className='sidebar-main'>          
             <Sidebar />
           </div>
-          <div className='dashboard-main'>
-            fsfsf
+          <div className='dashboard-main'>            
             <Navbar />
             {children}
           </div>

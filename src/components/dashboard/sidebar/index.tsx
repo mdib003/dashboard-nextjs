@@ -1,6 +1,20 @@
+import { Button } from "@component/components/commonComponents/button"
 import { Heading } from "@component/components/commonComponents/heading"
 import { ImageComponent } from "@component/components/commonComponents/image"
+import { List } from "@component/components/commonComponents/list"
 import { TextComponent } from "@component/components/commonComponents/text"
+
+/* const ListItemData = [
+    {
+        children: <Button text='Dashboard'   />
+    },
+    {
+        children: <Button text='Users'  />
+    },
+    {
+        children: <Button text='Products'   />
+    }
+] */
 
 export const Sidebar = () => {
     return (
@@ -15,7 +29,8 @@ export const Sidebar = () => {
                 </div>
             </div>
             <div className="page-list">
-                
+            <TextComponent text='Pages' />
+          {/*   <List listItems={ListItemData}/> */}
             </div>           
         </div>
     )

@@ -1,7 +1,8 @@
+import { Heading } from "@component/components/commonComponents/heading"
+
 export const Navbar = () => {
     return (
-        <div>
-            Navbar
+        <div className="dashboard-navbar">          
         </div>
     )
 }
