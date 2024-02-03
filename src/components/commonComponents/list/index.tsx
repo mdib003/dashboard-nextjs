@@ -13,9 +13,9 @@ export const List = ({ listItems }: ListProps) => {
     return (
         <ul>
             {
-                listItems.map(({children, listStyleType = 'list-style-none', className = ''}: ListItemsProps) => {
+                listItems.map(({ children, listStyleType = 'list-style-none', className = ''}: ListItemsProps, i: number) => {
                     return (
-                        <li className={`${listStyleType} ${className}`}>
+                        <li className={`${listStyleType} ${className}`} key={i}>
                             {children}
                         </li>
                     )

@@ -98,6 +98,23 @@ p {
   object-fit: contain;
 }
 
+.list-style-none {
+  list-style-type: none;
+}
+
+.mar-r-4 {
+  margin-right: 4px;
+}
+
+.mar-r-8 {
+  margin-right: 8px;
+}
+
+
+.mar-b-8 {
+  margin-bottom: 8px;
+}
+
 .primary-btn {
   padding: 16px 12px;
   border-radius: var(--border-radius-1);
@@ -121,13 +138,31 @@ p {
   text-decoration: none;
 }
 
+.link1 {
+  text-decoration: none;
+  background-color: transparent;
+  color: var(--color3);
+  width: 100%;
+  display: block;
+  padding: 12px;
+  transition: all 0.25s;
+  border-radius: var(--border-radius-1);
+}
+
+.link1:hover {
+  background-color: var(--color3);
+  color: var(--color2);
+  transition: all 0.25s;
+
+}
+
 /** DASHBOARD CSS **/
 
 .dashboard-container {
   display: flex;
 }
 
-.dashboard-main {  
+.dashboard-main {
   flex: 4;
   padding: var(--padding-1);
 }
