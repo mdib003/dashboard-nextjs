@@ -110,9 +110,12 @@ p {
   margin-right: 8px;
 }
 
-
 .mar-b-8 {
   margin-bottom: 8px;
+}
+
+.mar-t-16 {
+  margin-top: 16px;
 }
 
 .primary-btn {
@@ -149,6 +152,29 @@ p {
   border-radius: var(--border-radius-1);
 }
 
+.tertiary {
+  background-color: #478778;
+  cursor: pointer;
+  outline: none;
+  padding: 5px 8px;
+  border-radius: var(--border-radius-1);
+  border: none;
+  text-decoration: none;
+  font-size: 14px;
+  color: var(--bg1);
+}
+
+.danger {
+  background-color: tomato;
+  cursor: pointer;
+  outline: none;
+  padding: 4px 8px;
+  border-radius: var(--border-radius-1);
+  border: none;
+  font-size: 14px;
+  color: var(--bg1);
+}
+
 .link1:hover {
   background-color: var(--color3);
   color: var(--color2);
@@ -157,8 +183,47 @@ p {
 
 table {
   width: 100%;
+  background-color: var(--color2);
+  color: var(--bg1);
+  border-radius: var(--border-radius-1);
 }
 
+th, td {
+  padding: 16px;
+  text-align: left;
+}
+
+.height-60 {
+  height: 60px;
+}
+
+.width-60 {
+  width: 60px;
+}
+
+.block {
+  display: block;
+}
+
+.rounded {
+  border-radius: 100%;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.flex {
+  display: flex;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
 /** DASHBOARD CSS **/
 
 .dashboard-container {

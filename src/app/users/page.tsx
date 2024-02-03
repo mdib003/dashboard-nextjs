@@ -1,31 +1,24 @@
-import { Table } from "@component/components/commonComponents/table"
+import { UsersTable } from "@component/components/commonComponents/table"
 
 const userTableHeadData = [
     {
-        theadRow: ['Name','Email','Created','Role','Status']
+        theadRow: ['Name', 'Email', 'Created', 'Role', 'Status']
     }
 ]
 
 const userTableBodyData = [
+
     {
-        tbodyRow: [
-            'Firt Name', 'test@gmail.com', 'Nov 24 2024', 'Client', 'Active'
-        ]
+        name: 'FirstName', email: 'test@example.com', createdAt: 'Nov 24 2015', role: 'Client', status: 'active', src: 'https://w7.pngwing.com/pngs/178/595/png-transparent-user-profile-computer-icons-login-user-avatars-thumbnail.png', alt: 'user image'
     },
     {
-        tbodyRow: [
-            'Firt Name', 'test@gmail.com', 'Nov 24 2024', 'Client', 'Active'
-        ]
+        name: 'FirstName', email: 'test@example.com', createdAt: 'Nov 24 2015', role: 'Client', status: 'active', src: 'https://w7.pngwing.com/pngs/178/595/png-transparent-user-profile-computer-icons-login-user-avatars-thumbnail.png', alt: 'user image'
     },
     {
-        tbodyRow: [
-            'Firt Name', 'test@gmail.com', 'Nov 24 2024', 'Client', 'Active'
-        ]
+        name: 'FirstName', email: 'test@example.com', createdAt: 'Nov 24 2015', role: 'Client', status: 'active', src: 'https://w7.pngwing.com/pngs/178/595/png-transparent-user-profile-computer-icons-login-user-avatars-thumbnail.png', alt: 'user image'
     },
     {
-        tbodyRow: [
-            'Firt Name', 'test@gmail.com', 'Nov 24 2024', 'Client', 'Active'
-        ]
+        name: 'FirstName', email: 'test@example.com', createdAt: 'Nov 24 2015', role: 'Client', status: 'active', src: 'https://w7.pngwing.com/pngs/178/595/png-transparent-user-profile-computer-icons-login-user-avatars-thumbnail.png', alt: 'user image'
     },
 
 ]
@@ -34,7 +27,7 @@ const userTableBodyData = [
 const UsersPage = () => {
     return (
         <div>
-            <Table thead={userTableHeadData} tbody={userTableBodyData}></Table>
+            <UsersTable thead={userTableHeadData} tbody={userTableBodyData}></UsersTable>
         </div>
     )
 }
