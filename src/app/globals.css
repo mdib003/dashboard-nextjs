@@ -153,7 +153,10 @@ p {
   background-color: var(--color3);
   color: var(--color2);
   transition: all 0.25s;
+}
 
+table {
+  width: 100%;
 }
 
 /** DASHBOARD CSS **/
