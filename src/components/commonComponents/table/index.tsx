@@ -54,8 +54,7 @@ export const UsersTable = ({ thead, tbody }: UserTableProps) => {
             </thead>
             <tbody>
                 {
-                    tbody.map((trow, i: number) => {
-                        console.log(trow)
+                    tbody.map((trow, i: number) => {                       
                         return (
                             <tr key={i}>
                                 <th className="flex align-center "><span className="mar-r-8 width-60 height-60 rounded overflow-hidden block"><ImageComponent src={trow.src} alt={trow.alt} objFit="contain" /></span>{trow.name}</th>
@@ -93,8 +92,7 @@ export const ProductsTable = ({ thead, tbody }: ProductTableProps) => {
             </thead>
             <tbody>
                 {
-                    tbody.map((trow, i: number) => {
-                        console.log(trow)
+                    tbody.map((trow, i: number) => {                        
                         return (
                             <tr key={i}>
                                 <th className="flex align-center ">{trow.name}</th>

@@ -1,4 +1,5 @@
 import { UsersTable } from "@component/components/commonComponents/table"
+import { fetchUsers } from "../lib/fetchDatabase"
 
 const userTableHeadData = [
     {
@@ -24,7 +25,9 @@ const userTableBodyData = [
 ]
 
 
-const UsersPage = () => {
+const UsersPage = async () => {
+    await fetchUsers()
+
     return (
         <div>
             <UsersTable thead={userTableHeadData} tbody={userTableBodyData}></UsersTable>
