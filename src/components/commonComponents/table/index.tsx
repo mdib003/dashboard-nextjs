@@ -16,7 +16,8 @@ interface TableHeadProps {
 }
 
 interface ProductTableBodyProps {
-    name: string,
+    id: string
+    title: string,
     description: string,
     price: number,
     added: string,
@@ -24,6 +25,7 @@ interface ProductTableBodyProps {
 }
 
 interface UserTableBodyProps {
+    id: string
     name: string,
     email: string,
     createdAt: string,
@@ -62,6 +64,10 @@ export const UsersTable = ({ thead, tbody }: UserTableProps) => {
                                 <th>{trow.createdAt}</th>
                                 <th>{trow.role}</th>
                                 <th>{trow.status}</th>
+                                <th>
+                                <Button type='link' text='View' btnClass="tertiary" className='mar-r-4' href={`/users/${trow.id}`}></Button>
+                                <Button type='button' text='Delete' btnClass="danger"></Button>
+                                </th>
                             </tr>
                         )
                     })
@@ -95,13 +101,12 @@ export const ProductsTable = ({ thead, tbody }: ProductTableProps) => {
                     tbody.map((trow, i: number) => {                        
                         return (
                             <tr key={i}>
-                                <th className="flex align-center ">{trow.name}</th>
+                                <th className="flex align-center ">{trow.title}</th>
                                 <th>{trow.description.slice(0, 60)}...</th>
-                                <th>{trow.price}</th>
-                                <th>{trow.added}</th>
+                                <th>{trow.price}</th>                              
                                 <th>{trow.stock}</th>
                                 <th>
-                                <Button type='link' text='View' btnClass="tertiary" className='mar-r-4'></Button>
+                                <Button type='link' text='View' btnClass="tertiary" className='mar-r-4' href={`/products/${trow.id}`}></Button>
                                 <Button type='button' text='Delete' btnClass="danger"></Button>
                                 </th>
                             </tr>

@@ -3,27 +3,9 @@ import { fetchUsers } from "../lib/fetchDatabase"
 
 const userTableHeadData = [
     {
-        theadRow: ['Name', 'Email', 'Created', 'Role', 'Status']
+        theadRow: ['Name', 'Email', 'Created', 'Role', 'Status', 'Action']
     }
 ]
-
-const userTableBodyData = [
-
-    {
-        name: 'FirstName', email: 'test@example.com', createdAt: 'Nov 24 2015', role: 'Client', status: 'active', src: 'https://w7.pngwing.com/pngs/178/595/png-transparent-user-profile-computer-icons-login-user-avatars-thumbnail.png', alt: 'user image'
-    },
-    {
-        name: 'FirstName', email: 'test@example.com', createdAt: 'Nov 24 2015', role: 'Client', status: 'active', src: 'https://w7.pngwing.com/pngs/178/595/png-transparent-user-profile-computer-icons-login-user-avatars-thumbnail.png', alt: 'user image'
-    },
-    {
-        name: 'FirstName', email: 'test@example.com', createdAt: 'Nov 24 2015', role: 'Client', status: 'active', src: 'https://w7.pngwing.com/pngs/178/595/png-transparent-user-profile-computer-icons-login-user-avatars-thumbnail.png', alt: 'user image'
-    },
-    {
-        name: 'FirstName', email: 'test@example.com', createdAt: 'Nov 24 2015', role: 'Client', status: 'active', src: 'https://w7.pngwing.com/pngs/178/595/png-transparent-user-profile-computer-icons-login-user-avatars-thumbnail.png', alt: 'user image'
-    },
-
-]
-
 
 const UsersPage = async () => {
     const usersData = await fetchUsers()    

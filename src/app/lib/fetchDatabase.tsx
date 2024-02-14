@@ -1,13 +1,23 @@
 import { connectDB } from "./database"
+import { Products } from "./models/productsSchema"
 import { User } from "./models/userSchema"
 
 export const fetchUsers = async () => {
-    let users;
     try {
         await connectDB()
-        users = await User.find()
+        let users = await User.find()
+        return { users }
     } catch (err) {
         console.error(err)
     }
-    return {users}
+}
+
+export const fetchProducts = async () => {
+    try {
+        await connectDB()
+        let products = await Products.find()
+        return { products }
+    } catch (err) {
+        console.error(err)
+    }
 }
