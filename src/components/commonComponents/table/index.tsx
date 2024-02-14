@@ -29,7 +29,7 @@ interface UserTableBodyProps {
     createdAt: string,
     role: string,
     status: string,
-    src: string,
+    img: string,
     alt: string,
 }
 
@@ -57,7 +57,7 @@ export const UsersTable = ({ thead, tbody }: UserTableProps) => {
                     tbody.map((trow, i: number) => {                       
                         return (
                             <tr key={i}>
-                                <th className="flex align-center "><span className="mar-r-8 width-60 height-60 rounded overflow-hidden block"><ImageComponent src={trow.src} alt={trow.alt} objFit="contain" /></span>{trow.name}</th>
+                                <th className="flex align-center "><span className="mar-r-8 width-60 height-60 rounded overflow-hidden block"><ImageComponent src={trow.img} alt={trow.alt} objFit="contain" /></span>{trow.name}</th>
                                 <th>{trow.email}</th>
                                 <th>{trow.createdAt}</th>
                                 <th>{trow.role}</th>

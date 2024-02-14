@@ -26,11 +26,10 @@ const userTableBodyData = [
 
 
 const UsersPage = async () => {
-    await fetchUsers()
-
+    const usersData = await fetchUsers()    
     return (
         <div>
-            <UsersTable thead={userTableHeadData} tbody={userTableBodyData}></UsersTable>
+            <UsersTable thead={userTableHeadData} tbody={usersData?.users}></UsersTable>
         </div>
     )
 }
