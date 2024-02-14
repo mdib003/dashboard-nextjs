@@ -110,6 +110,10 @@ p {
   margin-right: 8px;
 }
 
+.mar-l-8 {
+  margin-left: 8px;
+}
+
 .mar-b-8 {
   margin-bottom: 8px;
 }
@@ -201,6 +205,14 @@ th, td {
   width: 60px;
 }
 
+.width-160 {
+  width: 160px;
+}
+
+.height-160 {
+  height: 160px;
+}
+
 .block {
   display: block;
 }
@@ -224,6 +236,37 @@ th, td {
 .justify-center {
   justify-content: center;
 }
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-1 {
+  flex: 1
+}
+
+.flex-4 {
+  flex: 4
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+input {
+  background-color: transparent;
+  outline: none;
+  border: 1px solid var(--bg2);
+  border-radius: var(--border-radius-1);
+  padding: var(--padding-1);
+  color: var(--bg2);
+  width: 100%;
+}
+
+.width-half {
+  width: 50%;
+}
+
 /** DASHBOARD CSS **/
 
 .dashboard-container {
@@ -273,4 +316,16 @@ th, td {
   background-color: var(--color2);
   padding: var(--padding-2);
   border-radius: var(--border-radius-2);
+}
+
+/** USER DETAILS PAGE CSS */
+
+.user-details-page {
+  background-color: var(--color2);
+  border-radius: var(--border-radius-2);
+  padding: 16px;
+}
+
+.input-box {
+  width: calc(50% - 8px);
 }

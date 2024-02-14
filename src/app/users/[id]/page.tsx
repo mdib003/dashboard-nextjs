@@ -1,9 +1,12 @@
-const UserDetailsPage = async () => {
+import { fetchUsers } from "@component/app/lib/fetchDatabase"
+import { UserDetailsComponent } from "@component/components/userDetailsComponent"
 
+const UserDetailsPage = async () => {    
+
+    const userDetails = await fetchUsers()
+    console.log(userDetails)
     return (
-        <div>
-           
-        </div>
+        <UserDetailsComponent />
     )
 }
 
