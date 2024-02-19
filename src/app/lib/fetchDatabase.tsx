@@ -2,9 +2,13 @@ import { connectDB } from "./database"
 import { Products } from "./models/productsSchema"
 import { User } from "./models/userSchema"
 
+let connectionStatus = false
+
 export const fetchUsers = async () => {
     try {
-        await connectDB()
+        if (!connectionStatus) {
+            connectionStatus = await connectDB()
+        }
         let users = await User.find()
         return { users }
     } catch (err) {
@@ -14,7 +18,9 @@ export const fetchUsers = async () => {
 
 export const fetchProducts = async () => {
     try {
-        await connectDB()
+        if (!connectionStatus) {
+            connectionStatus = await connectDB()
+        }
         let products = await Products.find()
         return { products }
     } catch (err) {

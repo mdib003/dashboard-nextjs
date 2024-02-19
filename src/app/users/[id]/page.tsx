@@ -1,12 +1,13 @@
-import { fetchUsers } from "@component/app/lib/fetchDatabase"
+import { fetchUserById } from "@component/app/lib/fetchUserById"
 import { UserDetailsComponent } from "@component/components/userDetailsComponent"
 
-const UserDetailsPage = async () => {    
+const UserDetailsPage = async ({ params }) => {
 
-    const userDetails = await fetchUsers()
-    console.log(userDetails)
+    const { id } = params
+    const user = await fetchUserById(id)
+   
     return (
-        <UserDetailsComponent />
+        <UserDetailsComponent user={JSON.stringify(user)}/>
     )
 }
 

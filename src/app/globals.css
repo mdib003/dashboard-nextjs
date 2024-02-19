@@ -253,7 +253,7 @@ th, td {
   flex-wrap: wrap;
 }
 
-input {
+input, select {
   background-color: transparent;
   outline: none;
   border: 1px solid var(--bg2);
@@ -263,8 +263,21 @@ input {
   width: 100%;
 }
 
+option, option:hover {
+  background-color: var(--color2);
+  outline: none; 
+  border-radius: var(--border-radius-1);
+  padding: var(--padding-2);
+  color: var(--bg2);
+  width: 100%;
+}
+
 .width-half {
   width: 50%;
+}
+
+.width-full {
+  width: 100%;
 }
 
 /** DASHBOARD CSS **/
@@ -328,4 +341,9 @@ input {
 
 .input-box {
   width: calc(50% - 8px);
+}
+
+.input-box-btn > button {
+  height: 60%;
+  margin-top: 26px;
 }
