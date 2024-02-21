@@ -1,4 +1,4 @@
-import { fetchUserById } from "@component/app/lib/fetchUserById"
+import { fetchUserById } from "@component/app/lib/fetchUser"
 import { UserDetailsComponent } from "@component/components/userDetailsComponent"
 
 const UserDetailsPage = async ({ params }) => {

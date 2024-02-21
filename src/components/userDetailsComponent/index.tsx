@@ -7,12 +7,11 @@ import { Heading } from "../commonComponents/heading"
 import { ImageComponent } from "../commonComponents/image"
 import { InputComponent } from "../commonComponents/input"
 import { TextComponent } from "../commonComponents/text"
-import { fetchUserById } from "@component/app/lib/fetchUserById"
+import { fetchUserById } from "@component/app/lib/fetchUser"
 
 export const UserDetailsComponent = ({ user }: any) => {
-    const data = JSON.parse(user)
 
-    const [userData, setUserData] = useState(data)
+    const [userData, setUserData] = useState(JSON.parse(user))
 
     const inputHandler = (e: any) => {
         if (e.target.name === 'status') {
@@ -35,7 +34,7 @@ export const UserDetailsComponent = ({ user }: any) => {
                 <div className="width-160 height-160 rounded overflow-hidden">
                     <ImageComponent src={'https://cdn-icons-png.flaticon.com/512/219/219969.png'} alt={'ext'} objFit="contain"></ImageComponent>
                 </div>
-                <Heading text={'name'} type="h2"></Heading>
+                <Heading text={userData.name} type="h2"></Heading>
             </div>
             <div className="flex-4 flex flex-wrap box-2">
                 <div className="mar-r-8 mar-b-8 input-box">

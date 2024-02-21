@@ -253,7 +253,7 @@ th, td {
   flex-wrap: wrap;
 }
 
-input, select {
+input, select, textarea {
   background-color: transparent;
   outline: none;
   border: 1px solid var(--bg2);
@@ -333,7 +333,7 @@ option, option:hover {
 
 /** USER DETAILS PAGE CSS */
 
-.user-details-page {
+.user-details-page, .product-details-page  {
   background-color: var(--color2);
   border-radius: var(--border-radius-2);
   padding: 16px;
@@ -346,4 +346,15 @@ option, option:hover {
 .input-box-btn > button {
   height: 60%;
   margin-top: 26px;
+}
+
+/** PRODUCT DETAILS PAGE CSS */
+
+.input-box > textarea {  
+  height: 80%;
+}
+
+.product-input-box-btn button{
+  margin-top: 24px;
+height: 48px;
 }
