@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { SelectComponent } from "../commonComponents/Select"
-import { Button } from "../commonComponents/button"
+import { CTA } from "../commonComponents/cta"
 import { Heading } from "../commonComponents/heading"
 import { ImageComponent } from "../commonComponents/image"
 import { InputComponent } from "../commonComponents/input"
@@ -30,12 +30,12 @@ export const ProductDetailsComponent = ({ product }: any) => {
     }
 
     return (
-        <div className="mar-t-16 flex product-details-page ">
+        <div className="mar-t-16 flex product-details-page">
             <div className="flex flex-col align-center flex-1 box-1">
                 <div className="width-160 height-160 rounded overflow-hidden">
                     <ImageComponent src={'https://cdn-icons-png.flaticon.com/512/219/219969.png'} alt={'ext'} objFit="contain"></ImageComponent>
                 </div>
-                <Heading text={productData.title} type="h2"></Heading>
+                <Heading text={productData.title} type="h2" align={'text-center'}></Heading>
             </div>
             <div className="flex-4 flex flex-wrap box-2">
                 <div className="mar-r-8 mar-b-8 input-box">
@@ -55,9 +55,8 @@ export const ProductDetailsComponent = ({ product }: any) => {
                         <TextComponent text={'Price'}></TextComponent>
                         <InputComponent placeholder={'price'} inputName={'price'} inputValue={productData.price} onChangeHandler={inputHandler} />
                     </div>
-
                     <div className="product-input-box-btn">
-                        <Button text={'Edit'} type={'button'} btnClass="tertiary" className="width-full height-60" onClickHandler={updateproductDetails} />
+                        <CTA text={'Edit'} type={'button'} btnClass="tertiary" className="width-full height-60" onClickHandler={updateproductDetails} />
                     </div>
                 </div>
             </div>

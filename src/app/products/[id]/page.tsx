@@ -1,7 +1,7 @@
 import { fetchProductById } from "@component/app/lib/fetchProduct"
 import { ProductDetailsComponent } from "@component/components/productDetailsComponent"
 
-const ProductDetailsPage = async ({ params }) => {
+const ProductDetailsPage = async ({ params }: any) => {
 
     const { id } = params
     const product = await fetchProductById(id)

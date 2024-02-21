@@ -1,4 +1,4 @@
-import { Button } from "../button"
+import { CTA } from "../cta"
 import { ImageComponent } from "../image"
 
 export type UserTableProps = {
@@ -65,8 +65,8 @@ export const UsersTable = ({ thead, tbody }: UserTableProps) => {
                                 <th>{trow.role}</th>
                                 <th>{trow.status}</th>
                                 <th>
-                                <Button type='link' text='View' btnClass="tertiary" className='mar-r-4' href={`/users/${trow.id}`}></Button>
-                                <Button type='button' text='Delete' btnClass="danger"></Button>
+                                <CTA type='link' text='View' btnClass="tertiary" className='mar-r-4' href={`/users/${trow.id}`}></CTA>
+                                <CTA type='button' text='Delete' btnClass="danger"></CTA>
                                 </th>
                             </tr>
                         )
@@ -106,8 +106,8 @@ export const ProductsTable = ({ thead, tbody }: ProductTableProps) => {
                                 <th>{trow.price}</th>                              
                                 <th>{trow.stock}</th>
                                 <th>
-                                <Button type='link' text='View' btnClass="tertiary" className='mar-r-4' href={`/products/${trow.id}`}></Button>
-                                <Button type='button' text='Delete' btnClass="danger"></Button>
+                                <CTA type='link' text='View' btnClass="tertiary" className='mar-r-4' href={`/products/${trow.id}`}></CTA>
+                                <CTA type='button' text='Delete' btnClass="danger"></CTA>
                                 </th>
                             </tr>
                         )

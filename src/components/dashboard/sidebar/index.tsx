@@ -1,4 +1,4 @@
-import { Button } from "@component/components/commonComponents/button"
+import { CTA } from "@component/components/commonComponents/cta"
 import { Heading } from "@component/components/commonComponents/heading"
 import { ImageComponent } from "@component/components/commonComponents/image"
 import { List } from "@component/components/commonComponents/list"
@@ -12,30 +12,30 @@ import { FaSignOutAlt } from "react-icons/fa";
 
 const ListItemData = [
     {
-        children: <Button text='Dashboard' type="link" btnClass="secondary" href="/" linkType='link1' icon={<MdDashboardCustomize/>}/>,
+        children: <CTA text='Dashboard' type="link" btnClass="secondary" href="/" linkType='link1' icon={<MdDashboardCustomize/>}/>,
         className: "mar-b-8",        
     },
     {
-        children: <Button text='Users' type="link" btnClass="primary" href="/users" linkType='link1' icon={<FaUsers/>}/>,
+        children: <CTA text='Users' type="link" btnClass="primary" href="/users" linkType='link1' icon={<FaUsers/>}/>,
         className: "mar-b-8"
     },
     {
-        children: <Button text='Products' type="link" btnClass="primary" href="/products" linkType='link1' icon={<FaBoxOpen/>}/>,
+        children: <CTA text='Products' type="link" btnClass="primary" href="/products" linkType='link1' icon={<FaBoxOpen/>}/>,
         className: "mar-b-8"
     }
 ]
 
 const userHelpList = [
     {
-        children: <Button text='Settings' type="link" btnClass="secondary" href="/settings" linkType='link1' icon={<FaCog/>}/>,
+        children: <CTA text='Settings' type="link" btnClass="secondary" href="/settings" linkType='link1' icon={<FaCog/>}/>,
         className: "mar-b-8",        
     },
     {
-        children: <Button text='Users' type="link" btnClass="primary" href="/help" linkType='link1' icon={<FaQuestionCircle/>}/>,
+        children: <CTA text='Users' type="link" btnClass="primary" href="/help" linkType='link1' icon={<FaQuestionCircle/>}/>,
         className: "mar-b-8"
     },
     {
-        children: <Button text='Log out' type="link" btnClass="primary" href="/logout" linkType='link1' icon={<FaSignOutAlt/>}/>,
+        children: <CTA text='Log out' type="link" btnClass="primary" href="/logout" linkType='link1' icon={<FaSignOutAlt/>}/>,
         className: "mar-b-8"
     }
 ]
