@@ -56,14 +56,15 @@ export const UsersTable = ({ thead, tbody }: UserTableProps) => {
             </thead>
             <tbody>
                 {
-                    tbody.map((trow, i: number) => {                       
+                    tbody.map((trow, i: number) => {  
+                        let date = new Date(trow.createdAt)
                         return (
                             <tr key={i}>
                                 <th className="flex align-center "><span className="mar-r-8 width-60 height-60 rounded overflow-hidden block"><ImageComponent src={trow.img} alt={trow.alt} objFit="contain" /></span>{trow.name}</th>
-                                <th>{trow.email}</th>
-                                <th>{trow.createdAt}</th>
-                                <th>{trow.role}</th>
-                                <th>{trow.status}</th>
+                                <th>{trow.email ? trow.email : ''}</th>
+                                <th>{trow.createdAt ? <>{date.getDate()}/{date.getMonth()}/{date.getFullYear()}</>: "" }</th>
+                                <th>{trow.role ? trow.role : ''}</th>
+                                <th>{trow.status ? trow.status: ''}</th>
                                 <th>
                                 <CTA type='link' text='View' btnClass="tertiary" className='mar-r-4' href={`/users/${trow.id}`}></CTA>
                                 <CTA type='button' text='Delete' btnClass="danger"></CTA>

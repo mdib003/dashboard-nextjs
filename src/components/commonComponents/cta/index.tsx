@@ -5,18 +5,19 @@ export type CTAProps = LinkProps | ButtonProps
 type GenericProps = {
     text: string;
     btnClass: 'primary' | 'secondary' | 'tertiary' | 'danger';
-    type: 'link' | 'button';
     icon?: React.ReactNode,
     className?: string
 }
 
 type LinkProps = GenericProps & {
     href: string;
-    linkType: 'link1' | '',
+    linkType?: 'link1' | '',
+    type: 'link'
 }
 
 type ButtonProps = GenericProps & {
     onClickHandler: () => void;
+    type: 'button'
 }
 
 

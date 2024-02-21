@@ -192,7 +192,8 @@ table {
   border-radius: var(--border-radius-1);
 }
 
-th, td {
+th,
+td {
   padding: 16px;
   text-align: left;
 }
@@ -237,6 +238,10 @@ th, td {
   justify-content: center;
 }
 
+.justify-between {
+  justify-content: space-between;
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -253,7 +258,9 @@ th, td {
   flex-wrap: wrap;
 }
 
-input, select, textarea {
+input,
+select,
+textarea {
   background-color: transparent;
   outline: none;
   border: 1px solid var(--bg2);
@@ -263,9 +270,10 @@ input, select, textarea {
   width: 100%;
 }
 
-option, option:hover {
+option,
+option:hover {
   background-color: var(--color2);
-  outline: none; 
+  outline: none;
   border-radius: var(--border-radius-1);
   padding: var(--padding-2);
   color: var(--bg2);
@@ -327,13 +335,14 @@ option, option:hover {
 .dashboard-navbar {
   width: 100%;
   background-color: var(--color2);
-  padding: var(--padding-2);
+  padding: var(--padding-1);
   border-radius: var(--border-radius-2);
 }
 
 /** USER DETAILS PAGE CSS */
 
-.user-details-page, .product-details-page  {
+.user-details-page,
+.product-details-page {
   background-color: var(--color2);
   border-radius: var(--border-radius-2);
   padding: 16px;
@@ -343,18 +352,26 @@ option, option:hover {
   width: calc(50% - 8px);
 }
 
-.input-box-btn > button {
+.input-box-btn>button {
   height: 60%;
   margin-top: 26px;
 }
 
 /** PRODUCT DETAILS PAGE CSS */
 
-.input-box > textarea {  
+.input-box>textarea {
   height: 80%;
 }
 
-.product-input-box-btn button{
+.product-input-box-btn button {
   margin-top: 24px;
-height: 48px;
+  height: 48px;
+}
+
+/** ADD NEW USER */
+
+.add-new-user {
+  background-color: var(--color2);
+  border-radius: var(--border-radius-2);
+  padding: 16px;
 }
