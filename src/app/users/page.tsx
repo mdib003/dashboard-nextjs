@@ -11,7 +11,7 @@ const UsersPage = async () => {
     const usersData = await fetchUsers()    
     return (
         <div>
-            <UsersTable thead={userTableHeadData} tbody={usersData?.users}></UsersTable>
+            <UsersTable thead={userTableHeadData} tbody={JSON.stringify(usersData?.users)}></UsersTable>
         </div>
     )
 }

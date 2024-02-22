@@ -19,7 +19,10 @@ export const AddNewUserComponent = () => {
         img: ''
     })
 
+    const [showAlert, setShowAlert] = useState(false)
+
     const inputHandler = (e: any) => {
+        setShowAlert(false)
         if (e.target.name === 'status') {
             setUserData({ ...userData, [e.target.name]: e.target.value === 'No' ? 'Deactivated' : 'Active' })
         } else if (e.target.name === 'role') {
@@ -32,12 +35,20 @@ export const AddNewUserComponent = () => {
         }
     }
 
-    const updateUserDetails = async () => {       
-        await addNewUser(userData)
+    const updateUserDetails = async () => {
+        if (!userData.address || !userData.contact || !userData.email || !userData.img || !userData.name || !userData.password || !userData.role || !userData.status) {
+            setShowAlert(true)
+
+        } else {
+            await addNewUser(userData)
+        }
     }
 
     return (
-        <div className="mar-t-16 flex add-new-user">
+        <div className="mar-t-16 position-rel add-new-user">
+            {showAlert && <div className="position-absolute width-full text-center show-alert">
+                Please enter all fields
+            </div>}
             <div className="mar-t-16 flex user-details-page ">
                 <div className="flex-4 flex flex-wrap box-2">
                     <div className="mar-r-8 mar-b-8 input-box">
@@ -70,7 +81,7 @@ export const AddNewUserComponent = () => {
                         <SelectComponent options={['Yes', 'No']} cb={inputHandler} defaultValue={userData.status.toLowerCase() === 'active' ? 'Yes' : 'No'} name={'status'} />
                     </div>
                     <div className="mar-l-8 input-box input-box-btn">
-                    <TextComponent text={'Image Url'}></TextComponent>
+                        <TextComponent text={'Image Url'}></TextComponent>
                         <InputComponent placeholder={'image'} inputName={'img'} inputValue={userData.img} onChangeHandler={inputHandler} />
                     </div>
                     <div className="mar-r-8 input-box input-box-btn">

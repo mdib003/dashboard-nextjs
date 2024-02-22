@@ -14,7 +14,7 @@ const ProductsPage = async () => {
 
     return (
         <div>
-            <ProductsTable thead={productTableHeadData} tbody={productsList?.products}></ProductsTable>
+            <ProductsTable thead={productTableHeadData} tbody={JSON.stringify(productsList?.products)}></ProductsTable>
         </div>
     )
 }

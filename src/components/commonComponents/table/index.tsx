@@ -1,3 +1,7 @@
+"use client"
+
+import { deleteUserById } from "@component/app/lib/deleteUser"
+import { deleteProductById } from "@component/app/lib/deleteProduct"
 import { CTA } from "../cta"
 import { ImageComponent } from "../image"
 
@@ -16,16 +20,16 @@ interface TableHeadProps {
 }
 
 interface ProductTableBodyProps {
-    id: string
+    _id: string
     title: string,
     description: string,
     price: number,
     added: string,
-    stock: number,   
+    stock: number,
 }
 
 interface UserTableBodyProps {
-    id: string
+    _id: string
     name: string,
     email: string,
     createdAt: string,
@@ -36,6 +40,10 @@ interface UserTableBodyProps {
 }
 
 export const UsersTable = ({ thead, tbody }: UserTableProps) => {
+
+    let tableBody = JSON.parse(tbody)
+
+    console.log(thead, tbody);
     return (
         <table className="mar-t-16">
             <thead>
@@ -56,18 +64,18 @@ export const UsersTable = ({ thead, tbody }: UserTableProps) => {
             </thead>
             <tbody>
                 {
-                    tbody.map((trow, i: number) => {  
+                    tableBody.map((trow, i: number) => {
                         let date = new Date(trow.createdAt)
                         return (
                             <tr key={i}>
                                 <th className="flex align-center "><span className="mar-r-8 width-60 height-60 rounded overflow-hidden block"><ImageComponent src={trow.img} alt={trow.alt} objFit="contain" /></span>{trow.name}</th>
                                 <th>{trow.email ? trow.email : ''}</th>
-                                <th>{trow.createdAt ? <>{date.getDate()}/{date.getMonth()}/{date.getFullYear()}</>: "" }</th>
+                                <th>{trow.createdAt ? <>{date.getDate()}/{date.getMonth()}/{date.getFullYear()}</> : ""}</th>
                                 <th>{trow.role ? trow.role : ''}</th>
-                                <th>{trow.status ? trow.status: ''}</th>
+                                <th>{trow.status ? trow.status : ''}</th>
                                 <th>
-                                <CTA type='link' text='View' btnClass="tertiary" className='mar-r-4' href={`/users/${trow.id}`}></CTA>
-                                <CTA type='button' text='Delete' btnClass="danger"></CTA>
+                                    <CTA type='link' text='View' btnClass="tertiary" className='mar-r-4' href={`/users/${trow._id}`}></CTA>
+                                    <CTA type='button' text='Delete' btnClass="danger" onClickHandler={() => deleteUserById(JSON.stringify(trow._id))}></CTA>
                                 </th>
                             </tr>
                         )
@@ -79,6 +87,7 @@ export const UsersTable = ({ thead, tbody }: UserTableProps) => {
 }
 
 export const ProductsTable = ({ thead, tbody }: ProductTableProps) => {
+    let tableBody = JSON.parse(tbody)
     return (
         <table className="mar-t-16">
             <thead>
@@ -99,16 +108,16 @@ export const ProductsTable = ({ thead, tbody }: ProductTableProps) => {
             </thead>
             <tbody>
                 {
-                    tbody.map((trow, i: number) => {                        
+                    tableBody.map((trow, i: number) => {
                         return (
                             <tr key={i}>
                                 <th className="flex align-center ">{trow.title}</th>
                                 <th>{trow.description.slice(0, 60)}...</th>
-                                <th>{trow.price}</th>                              
+                                <th>{trow.price}</th>
                                 <th>{trow.stock}</th>
                                 <th>
-                                <CTA type='link' text='View' btnClass="tertiary" className='mar-r-4' href={`/products/${trow.id}`}></CTA>
-                                <CTA type='button' text='Delete' btnClass="danger"></CTA>
+                                    <CTA type='link' text='View' btnClass="tertiary" className='mar-r-4' href={`/products/${trow._id}`}></CTA>
+                                    <CTA type='button' text='Delete' btnClass="danger" onClickHandler={() => deleteProductById(JSON.stringify(trow._id))}></CTA>
                                 </th>
                             </tr>
                         )

@@ -390,7 +390,6 @@ option:hover {
 .add-new-user {
   background-color: var(--color2);
   border-radius: var(--border-radius-2);
-  padding: 16px;
 }
 
 /** ADD NEW PRODUCT */
