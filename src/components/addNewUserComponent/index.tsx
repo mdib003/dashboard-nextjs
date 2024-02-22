@@ -37,7 +37,7 @@ export const AddNewUserComponent = () => {
     }
 
     return (
-        <div className="mar-t-16 add-new-user">
+        <div className="mar-t-16 flex add-new-user">
             <div className="mar-t-16 flex user-details-page ">
                 <div className="flex-4 flex flex-wrap box-2">
                     <div className="mar-r-8 mar-b-8 input-box">
@@ -74,7 +74,7 @@ export const AddNewUserComponent = () => {
                         <InputComponent placeholder={'image'} inputName={'img'} inputValue={userData.img} onChangeHandler={inputHandler} />
                     </div>
                     <div className="mar-r-8 input-box input-box-btn">
-                        <CTA text={'Edit'} type={'button'} btnClass="tertiary" className="width-full height-60" onClickHandler={updateUserDetails} />
+                        <CTA text={'Submit'} type={'button'} btnClass="tertiary" className="width-full height-60" onClickHandler={updateUserDetails} />
                     </div>
                 </div>
             </div>

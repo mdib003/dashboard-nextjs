@@ -6,8 +6,8 @@ export type TextAreaProps = {
 
 export const TextAreaComponent = ({ description, onChangeHandler, name }: TextAreaProps) => {
     return (
-        <textarea onChange={onChangeHandler} name={name}>
-            {description}
+        <textarea onChange={onChangeHandler} name={name} value={description || ''}>
+           {/*  {description} */}
         </textarea>
     )
 }
