@@ -7,12 +7,12 @@ import { ImageComponent } from "../image"
 
 export type UserTableProps = {
     thead: TableHeadProps[],
-    tbody: UserTableBodyProps[],
+    tbody: any,
 }
 
 export type ProductTableProps = {
     thead: TableHeadProps[],
-    tbody: ProductTableBodyProps[],
+    tbody: any,
 }
 
 interface TableHeadProps {
