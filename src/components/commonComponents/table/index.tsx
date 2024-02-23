@@ -26,6 +26,7 @@ interface ProductTableBodyProps {
     price: number,
     added: string,
     stock: number,
+    img: string
 }
 
 interface UserTableBodyProps {
@@ -36,7 +37,6 @@ interface UserTableBodyProps {
     role: string,
     status: string,
     img: string,
-    alt: string,
 }
 
 export const UsersTable = ({ thead, tbody }: UserTableProps) => {
@@ -63,11 +63,11 @@ export const UsersTable = ({ thead, tbody }: UserTableProps) => {
             </thead>
             <tbody>
                 {
-                    tableBody.map((trow, i: number) => {
+                    tableBody.map((trow: UserTableBodyProps, i: number) => {
                         let date = new Date(trow.createdAt)
                         return (
                             <tr key={i}>
-                                <th className="flex align-center "><span className="mar-r-8 width-60 height-60 rounded overflow-hidden block"><ImageComponent src={trow.img} alt={trow.alt} objFit="contain" /></span>{trow.name}</th>
+                                <th className="flex align-center "><span className="mar-r-8 width-60 height-60 rounded overflow-hidden block"><ImageComponent src={trow.img} alt={trow.name} objFit="contain" /></span>{trow.name}</th>
                                 <th>{trow.email ? trow.email : ''}</th>
                                 <th>{trow.createdAt ? <>{date.getDate()}/{date.getMonth()}/{date.getFullYear()}</> : ""}</th>
                                 <th>{trow.role ? trow.role : ''}</th>
@@ -107,10 +107,10 @@ export const ProductsTable = ({ thead, tbody }: ProductTableProps) => {
             </thead>
             <tbody>
                 {
-                    tableBody.map((trow, i: number) => {
+                    tableBody.map((trow: ProductTableBodyProps, i: number) => {
                         return (
                             <tr key={i}>
-                                <th className="flex align-center "><span className="mar-r-8 width-60 height-60 rounded overflow-hidden block"><ImageComponent src={trow.img} alt={trow.alt} objFit="contain" /></span>{trow.title}</th>
+                                <th className="flex align-center "><span className="mar-r-8 width-60 height-60 rounded overflow-hidden block"><ImageComponent src={trow.img} alt={trow.title} objFit="contain" /></span>{trow.title}</th>
                                 {/* <th className="flex align-center ">{trow.title}</th> */}
                                 <th>{trow.description.slice(0, 60)}...</th>
                                 <th>{trow.price}</th>
