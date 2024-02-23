@@ -42,8 +42,7 @@ interface UserTableBodyProps {
 export const UsersTable = ({ thead, tbody }: UserTableProps) => {
 
     let tableBody = JSON.parse(tbody)
-
-    console.log(thead, tbody);
+   
     return (
         <table className="mar-t-16">
             <thead>
@@ -111,7 +110,8 @@ export const ProductsTable = ({ thead, tbody }: ProductTableProps) => {
                     tableBody.map((trow, i: number) => {
                         return (
                             <tr key={i}>
-                                <th className="flex align-center ">{trow.title}</th>
+                                <th className="flex align-center "><span className="mar-r-8 width-60 height-60 rounded overflow-hidden block"><ImageComponent src={trow.img} alt={trow.alt} objFit="contain" /></span>{trow.title}</th>
+                                {/* <th className="flex align-center ">{trow.title}</th> */}
                                 <th>{trow.description.slice(0, 60)}...</th>
                                 <th>{trow.price}</th>
                                 <th>{trow.stock}</th>

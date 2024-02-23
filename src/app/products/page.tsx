@@ -10,11 +10,20 @@ const productTableHeadData = [
 
 const ProductsPage = async () => {
 
-    const productsList = await fetchProducts()    
+    const productsList = await fetchProducts()
 
     return (
         <div>
-            <ProductsTable thead={productTableHeadData} tbody={JSON.stringify(productsList?.products)}></ProductsTable>
+            <div>
+                {
+                    (productsList?.products?.length && productsList?.products?.length > 0) ?
+                        <ProductsTable thead={productTableHeadData} tbody={JSON.stringify(productsList?.products)}></ProductsTable> :
+                        <div className="mar-t-16 flex align-center not-found-container">
+                            <div className="width-full not-found">There are no products. Please click on add new products.</div>
+                        </div>
+                }
+            </div>
+
         </div>
     )
 }

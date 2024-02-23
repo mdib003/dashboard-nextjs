@@ -280,6 +280,18 @@ option:hover {
   width: 100%;
 }
 
+.border-radius-6 {
+  border-radius: 6px;
+}
+
+.border-radius-12 {
+  border-radius: 12px;
+}
+
+.box-shadow-1 {
+  box-shadow: 2px 2px 8px rgb(0,0,0,0.9);
+}
+
 .width-half {
   width: 50%;
 }
@@ -301,8 +313,21 @@ option:hover {
   background-color: tomato;
   border-radius: var(--border-radius-2);
   bottom: 100%;
-  z-index: 100;
-  
+  z-index: 100;  
+}
+
+.not-found-container {
+  background-color: var(--color2);
+  border-radius: var(--border-radius-2);
+  padding: 16px;
+  height: 160px;
+}
+
+.not-found {
+  background-color: tomato;
+  padding: 16px;
+  color: var(--bg1);
+  border-radius: var(--border-radius-1);
 }
 
 /** DASHBOARD CSS **/

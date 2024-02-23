@@ -31,8 +31,8 @@ export const UserDetailsComponent = ({ user }: any) => {
     return (
         <div className="mar-t-16 flex user-details-page ">
             <div className="flex flex-col align-center flex-1 box-1">
-                <div className="width-160 height-160 rounded overflow-hidden">
-                    <ImageComponent src={'https://cdn-icons-png.flaticon.com/512/219/219969.png'} alt={'ext'} objFit="contain"></ImageComponent>
+                <div className="width-160 height-160 mar-b-8 border-radius-6 box-shadow-1 overflow-hidden">
+                    <ImageComponent src={userData.img} alt={'ext'} objFit="contain"></ImageComponent>
                 </div>
                 <Heading text={userData.name} type="h2" align={'text-center'}></Heading>
             </div>

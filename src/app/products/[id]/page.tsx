@@ -5,9 +5,12 @@ const ProductDetailsPage = async ({ params }: any) => {
 
     const { id } = params
     const product = await fetchProductById(id)
-   
+
     return (
-        <ProductDetailsComponent product={JSON.stringify(product)}/>
+        <>
+            {product ? <ProductDetailsComponent product={JSON.stringify(product)} /> : <div className="mar-t-16 flex align-center not-found-container"><div className="width-full not-found">Product Does Not Exist</div></div>}
+        </>
+
     )
 }
 

@@ -5,9 +5,11 @@ const UserDetailsPage = async ({ params }: any) => {
 
     const { id } = params
     const user = await fetchUserById(id)
-   
+
     return (
-        <UserDetailsComponent user={JSON.stringify(user)}/>
+        <>
+            {user ? <UserDetailsComponent user={JSON.stringify(user)} /> : <div className="mar-t-16 flex align-center not-found-container"><div className="width-full not-found">User Does Not Exist</div></div>}
+        </>
     )
 }
 
